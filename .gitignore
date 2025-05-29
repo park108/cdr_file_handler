@@ -1,0 +1,4 @@
+.idea/*
+tests/*
+target/*
+/cdr_file_handler.iml
