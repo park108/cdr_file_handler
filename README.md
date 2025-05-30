@@ -4,6 +4,22 @@ CDR(Call Detail Record)를 처리하기 위한 고성능 파일 파서 테스트
 ## 기술 스택
 - Rust 2024
 
+## 환경 구성
+### 1. rustup 설치
+```shell
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+### 2. 터미널 재실행
+### 3. Rust 설치
+```shell
+rustup default stable
+```
+### 4. cargo 버전 확인
+(예시)
+```shell
+$ cargo --version
+cargo 1.87.0 (99624be96 2025-05-06)
+```
 
 # 처리 절차
 
@@ -23,17 +39,17 @@ CDR(Call Detail Record)를 처리하기 위한 고성능 파일 파서 테스트
 # 테스트
 
 ## 실행
+- cargo run -- {path}
+(예시)
 ```shell
-cargo run -- {path}
-예시> cargo run -- tests/test_data
+$ cargo run -- tests/test_data
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.04s
+     Running `target/debug/cdr_file_handler tests/test_data`
+📁 디렉토리 감시 시작: tests/test_data
 ```
 
 ## 결과
 ```shell
-   Compiling cdr_file_handler v0.1.0 (/Users/park108/Dev/rust/cdr_file_handler)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.23s
-     Running `target/debug/cdr_file_handler tests/test_data`
-📁 디렉토리 감시 시작: tests/test_data
 📌 변경 감지됨: /Users/park108/Dev/rust/cdr_file_handler/tests/test_data/cdr_300k_2.txt
 ✅ 처리 완료: 2025-05-29 14:47:21, 300000 레코드, 소요 시간: 232.79ms
 ⏳ 이벤트 없음. 대기 중...
@@ -41,5 +57,4 @@ cargo run -- {path}
 ✅ 처리 완료: 2025-05-29 14:47:36, 100000 레코드, 소요 시간: 84.47ms
 📌 변경 감지됨: /Users/park108/Dev/rust/cdr_file_handler/tests/test_data/cdr_100k_3.txt
 ✅ 처리 완료: 2025-05-29 14:47:39, 100000 레코드, 소요 시간: 96.14ms
-
 ```
