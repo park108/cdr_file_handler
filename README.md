@@ -7,12 +7,12 @@ CDR(Call Detail Record)를 처리하기 위한 고성능 파일 파서 테스트
 ## 환경 구성
 ### 1. rustup 설치
 ```shell
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 ### 2. 터미널 재실행
 ### 3. Rust 설치
 ```shell
-rustup default stable
+$ rustup default stable
 ```
 ### 4. cargo 버전 확인
 (예시)
